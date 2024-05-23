@@ -6,14 +6,13 @@ const detect = require("@chattylabs/language-detection");
 
 function detectLanguageCode(text) {
   try {
+    const language_code = ["bn", "ar"];
     const result = detect(text);
     var language = result.language;
-    if (language != "bn") {
-      if (language == "ar") {
-        language = "bn";
-      } else {
-        language = "en";
-      }
+    if (language_code.includes(language) == false) {
+      language = "en";
+    } else {
+      language = "bn";
     }
   } catch (error) {
     console.error("Error detecting language:", error);
@@ -22,10 +21,10 @@ function detectLanguageCode(text) {
   return language;
 }
 
-// const languageCode = detectLanguageCode("০১২৩৪৫৬৭৮৯");
-// console.log("languageCode detected is :" + languageCode);
+const languageCode = detectLanguageCode("০১২৩৪৫৬৭৮৯");
+console.log("languageCode detected is :" + languageCode);
 
-let text = "০১২৩৪৫৬৭৮৯";
+// let text = "০১২৩৪৫৬৭৮৯";
 // let code = text.charCodeAt(0);
-let code = text.codePointAt(2);
-console.log(code);
+// let code = text.codePointAt(2);
+// console.log(code);
