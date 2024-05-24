@@ -5,10 +5,10 @@
  */
 const projectId = "prediction-automation";
 const locationId = "australia-southeast1";
-const agentId = "b8fd905b-45cb-4e0a-ab4d-f3e53c5fe97a";
+const agentId = "";
 //const languageCode = 'en'
-const TELEGRAM_TOKEN = "6487451753:AAGALq0ebWrTRqQyvllKMUYLrNic-qwWKTg";
-const SERVER_URL = "https://dialogflow-telegram-xdk4pnmdba-ts.a.run.app";
+const TELEGRAM_TOKEN = "";
+const SERVER_URL = "";
 const detect = require("@chattylabs/language-detection");
 
 const structProtoToJson =
